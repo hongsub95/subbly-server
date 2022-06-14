@@ -21,43 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k80k+(3*eta3wy&a@l^9)okl0&u85wyrgo7ga*!+ttgcl4m23$"
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-]
-
-
-# Application definition
-
-DJANGO_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-]
-
-PROJECT_APPS = [
-    "users.apps.UsersConfig",
-    "core.apps.CoreConfig",
-    "clothes.apps.ClothesConfig",
-    "markets.apps.MarketsConfig",
-    "options.apps.OptionsConfig",
-    "lists.apps.ListsConfig",
-]
-
-THIRD_APPS = [
-    "bootstrap5",
-    "rest_framework",
-]
-
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -96,8 +63,8 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": os.environ.get("DB_NAME"),
-        "USER": "sub",
-        "PASSWORD": os.environ.get("DB_PW"),
+        "USER": "root",
+        "PASSWORD":os.environ.get("DB_PW"),
         "HOST": "172.19.64.1",
         "PORT": "3306",
     }
@@ -146,6 +113,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "users.User"
+
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
