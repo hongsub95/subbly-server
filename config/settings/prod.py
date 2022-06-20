@@ -3,8 +3,7 @@ from .common import *
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
+    "54.180.94.49"
 ]
 
 DJANGO_APPS = [
