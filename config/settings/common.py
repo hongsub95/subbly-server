@@ -62,10 +62,17 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
+<<<<<<< HEAD
         "NAME":"subbly",
         "USER": "root",
         "PASSWORD":"wjstjf123",
         "HOST": "localhost",
+=======
+        "NAME": os.environ.get("DB_NAME"),
+        "USER": "root",
+        "PASSWORD":os.environ.get("DB_PW"),
+        "HOST": "172.19.64.1",
+>>>>>>> 2d89f4b (test)
         "PORT": "3306",
     }
 }
