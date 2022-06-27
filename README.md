@@ -4,7 +4,7 @@ AWS E2(ubuntu), Nginx + Uwsgi를 이용하여 배포
 
 # Uwsgi
 #### path : etc/uwsgi/sites/subbly-server.ini
-#### cmd : uwsgi --http :8000 --module subbly-server.wsgi
+#### cmd : uwsgi --http :8000 -i /etc/uwsgi/sites/subbly-server.ini
 
         [uwsgi]
         base = /home/ubuntu/subbly-server
