@@ -1,9 +1,10 @@
 # subbly-server
 
-Nginx + Uwsgi를 이용하여 배포
+AWS E2(ubuntu), Nginx + Uwsgi를 이용하여 배포
 
 # Uwsgi
 #### path : etc/uwsgi/sites/subbly-server.ini
+#### cmd : uwsgi --http :8000 --module subbly-server.wsgi
 
         [uwsgi]
         base = /home/ubuntu/subbly-server
@@ -25,6 +26,7 @@ Nginx + Uwsgi를 이용하여 배포
 
 # Nginx
 #### path : etc/nginx/nginx.conf
+#### cmd : systemctl start nginx
 
         user www-data;
         worker_processes auto;
