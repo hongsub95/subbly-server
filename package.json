@@ -3,6 +3,6 @@
     "tailwindcss": "^3.0.15"
   },
   "scripts": {
-    "css": "npx tailwindcss -i ./config/settings/static/tailwind.input.css -o ./config/settings/static/tailwind.output.css --watch"
+    "css": "npx tailwindcss -i ./config/static/tailwind.input.css -o ./config/static/tailwind.output.css --watch"
   }
 }

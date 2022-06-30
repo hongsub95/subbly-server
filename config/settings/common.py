@@ -62,10 +62,10 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("DB_NAME"),
+        "NAME": "subbly",
         "USER": "root",
-        "PASSWORD":os.environ.get("DB_PW"),
-        "HOST": "172.19.64.1",
+        "PASSWORD":"1234",
+        "HOST": "localhost",
         "PORT": "3306",
     }
 }
@@ -121,7 +121,7 @@ INTERNAL_IPS = [
 MEDIA_ROOT = BASE_DIR / "uploads"
 
 STATICFILES_DIRS = [
-    BASE_DIR / "config/settings/static",
+    BASE_DIR / "config/static",
 ]
 
 REST_FRAMEWORK = {
